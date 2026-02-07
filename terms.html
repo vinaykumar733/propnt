@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms — PropNT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+    
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .grain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+    
+    .section-number {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-[#f5f5f5] antialiased selection:bg-white selection:text-black">
+
+  <div class="grain"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-40 px-6 py-6 flex justify-between items-center mix-blend-difference">
+    <a href="index.html" class="text-sm tracking-[0.3em] font-medium uppercase">PropNT</a>
+    <div class="hidden md:flex gap-8 text-xs tracking-widest uppercase opacity-60">
+      <a href="index.html#approach" class="hover:opacity-100 transition-opacity">Approach</a>
+      <a href="index.html#signal" class="hover:opacity-100 transition-opacity">Signal</a>
+      <a href="index.html#access" class="hover:opacity-100 transition-opacity">Access</a>
+    </div>
+    <button class="text-xs tracking-widest uppercase border border-white/20 px-4 py-2 hover:bg-white hover:text-black transition-all duration-300">
+      Enter
+    </button>
+  </nav>
+
+  <!-- Header -->
+  <header class="pt-32 pb-16 px-6 border-b border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-4">Legal</p>
+      <h1 class="text-4xl md:text-5xl font-light mb-6">Terms of Use</h1>
+      <p class="text-white/50 font-light max-w-2xl leading-relaxed">
+        These terms govern access to a controlled property discovery system. 
+        By entering PropNT, you accept a protocol of mediated access, verified identity, 
+        and structured intent—not open marketplace rules.
+      </p>
+      
+      <div class="mt-8 flex gap-4 text-[10px] tracking-widest uppercase opacity-40">
+        <span>Effective: February 2025</span>
+        <span>•</span>
+        <span>Version 1.0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-6 py-16">
+
+    <!-- Introduction -->
+    <section class="mb-20">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">00 — Agreement</p>
+      <div class="prose prose-invert prose-lg max-w-none">
+        <p class="text-white/70 font-light leading-relaxed mb-6">
+          PropNT operates as an access control layer for residential property discovery, 
+          not a classifieds platform or open marketplace. These Terms constitute a binding 
+          agreement between you and PropNT Property Network ("we," "us," "our").
+        </p>
+        <p class="text-white/70 font-light leading-relaxed">
+          By accessing or using PropNT, you acknowledge that you are entering a system 
+          designed for <span class="text-white/90">controlled discovery</span>, not free-for-all browsing. 
+          The architecture—intent filtering, anonymized supply, mediated contact—is not 
+          a feature set. It is the core service.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 1 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">01 — Definitions</p>
+      
+      <h2 class="text-2xl font-light mb-6">The Lexicon</h2>
+      
+      <div class="space-y-6 text-white/50 font-light text-sm leading-relaxed">
+        <div class="border-l-2 border-white/20 pl-6">
+          <p class="text-white/80 font-medium mb-1">"Discovery"</p>
+          <p>The phase where users interact with anonymized property signals through conversational AI, without access to identifying details.</p>
+        </div>
+        <div class="border-l-2 border-white/20 pl-6">
+          <p class="text-white/80 font-medium mb-1">"Intent Qualification"</p>
+          <p>The process of verifying user seriousness through structured questions, document submission, and timeline confirmation.</p>
+        </div>
+        <div class="border-l-2 border-white/20 pl-6">
+          <p class="text-white/80 font-medium mb-1">"StayBroker"</p>
+          <p>Verified human mediators who facilitate controlled introductions between qualified seekers and verified providers.</p>
+        </div>
+        <div class="border-l-2 border-white/20 pl-6">
+          <p class="text-white/80 font-medium mb-1">"Provider"</p>
+          <p>Property owners, operators, or lessors who have submitted verification documents and listed supply signals.</p>
+        </div>
+        <div class="border-l-2 border-white/20 pl-6">
+          <p class="text-white/80 font-medium mb-1">"Seeker"</p>
+          <p>Individuals or entities searching for residential property, business acquisition, or lease opportunities.</p>
+        </div>
+        <div class="border-l-2 border-white/20 pl-6">
+          <p class="text-white/80 font-medium mb-1">"Silo Protocol"</p>
+          <p>The technical architecture preventing direct contact between parties until mediation checkpoints are cleared.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">02 — Eligibility & Access</p>
+      
+      <h2 class="text-2xl font-light mb-6">Who May Enter</h2>
+      
+      <div class="space-y-6 text-white/50 font-light text-sm leading-relaxed">
+        <p>
+          PropNT is available only to individuals who:
+        </p>
+        <ul class="space-y-2 ml-4">
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Are at least 18 years of age</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Possess valid government-issued identification</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Can demonstrate legitimate property interest (as seeker or provider)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Accept mediation as a mandatory component of contact</span>
+          </li>
+        </ul>
+        <p>
+          We reserve the right to deny access, suspend accounts, or terminate participation 
+          without explanation. This is not arbitrary—it is structural. The system requires 
+          signal quality over user volume.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">03 — The Protocol Rules</p>
+      
+      <h2 class="text-2xl font-light mb-6">Non-Negotiables</h2>
+      
+      <p class="text-white/50 font-light leading-relaxed mb-8">
+        PropNT functions only if these rules are universally observed. Violation constitutes 
+        breach and grounds for immediate termination.
+      </p>
+
+      <div class="space-y-8">
+        <div class="bg-white/5 border border-white/10 p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="ban" class="w-5 h-5 text-red-500/60"></i>
+            <h3 class="text-sm tracking-widest uppercase opacity-80">No Bypass Attempts</h3>
+          </div>
+          <p class="text-white/50 font-light text-sm leading-relaxed">
+            Any attempt to circumvent StayBroker mediation—extracting contact details from 
+            conversation, using partial information to locate properties independently, 
+            or soliciting direct contact before qualification—is prohibited. We monitor 
+            for pattern-based bypass attempts.
+          </p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="shield-alert" class="w-5 h-5 text-yellow-500/60"></i>
+            <h3 class="text-sm tracking-widest uppercase opacity-80">No Information Extraction</h3>
+          </div>
+          <p class="text-white/50 font-light text-sm leading-relaxed">
+            Users may not scrape, harvest, or systematically collect property signals, 
+            location data, or conversation patterns. Our supply layer is proprietary and 
+            access is personal, not transferable.
+          </p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="user-x" class="w-5 h-5 text-orange-500/60"></i>
+            <h3 class="text-sm tracking-widest uppercase opacity-80">No Misrepresentation</h3>
+          </div>
+          <p class="text-white/50 font-light text-sm leading-relaxed">
+            False statements during qualification—budget, timeline, identity, purpose—void 
+            all protections. We verify selectively but thoroughly. Discovered misrepresentation 
+            results in permanent exclusion and potential legal action.
+          </p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <i data-lucide="lock" class="w-5 h-5 text-green-500/60"></i>
+            <h3 class="text-sm tracking-widest uppercase opacity-80">Confidentiality of Mediation</h3>
+          </div>
+          <p class="text-white/50 font-light text-sm leading-relaxed">
+            Communications through StayBroker are confidential. Disclosing mediator 
+            identities, conversation content, or negotiation details to third parties 
+            breaches the trust layer and terminates access.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">04 — User Obligations</p>
+      
+      <h2 class="text-2xl font-light mb-6">What You Commit To</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="space-y-4">
+          <h3 class="text-xs tracking-widest uppercase opacity-60 mb-4">As a Seeker</h3>
+          <ul class="space-y-3 text-white/50 font-light text-sm">
+            <li class="flex items-start gap-2">
+              <span class="text-white/20">•</span>
+              <span>Respond to qualification prompts honestly</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-white/20">•</span>
+              <span>Maintain active status or withdraw intent</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-white/20">•</span>
+              <span>Respect provider response timelines</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-white/20">•</span>
+              <span>Complete mediation feedback loops</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-white/20">•</span>
+              <span>Honor scheduled viewings and meetings</span>
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-xs tracking-widest uppercase opacity-60 mb-4">As a Provider</h3>
+          <ul class="space-y-3 text-white/50 font-light text-sm">
+            <li class="flex items-start gap-2">
+              <span class="text-white/20">•</span>
+              <span>Maintain accurate availability status</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-white/20">•</span>
+              <span>Update property signals within 48 hours of material change</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-white/20">•</span>
+              <span>Respond to qualified introductions within 24 hours</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-white/20">•</span>
+              <span>Verify identity documents annually</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-white/20">•</span>
+              <span>Disclose material defects or encumbrances</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">05 — StayBroker Relationship</p>
+      
+      <h2 class="text-2xl font-light mb-6">Mediation, Not Intermediation</h2>
+      
+      <div class="space-y-6 text-white/50 font-light text-sm leading-relaxed">
+        <p>
+          StayBroker mediators are not agents of either party. They are process controllers 
+          with a singular mandate: convert qualified intent into structured transaction 
+          opportunities.
+        </p>
+        <p>
+          Mediators may:
+        </p>
+        <ul class="space-y-2 ml-4 mb-6">
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Verify documents and identity claims</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Structure initial conversations and expectations</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Facilitate physical or virtual property access</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Document negotiation progress and outcomes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Terminate mediation if protocol violations occur</span>
+          </li>
+        </ul>
+        <p>
+          Mediators do not:
+        </p>
+        <ul class="space-y-2 ml-4">
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Represent either party in legal or financial matters</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Guarantee transaction outcomes or property condition</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Accept fees from both parties simultaneously (conflict protocol)</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">06 — Intellectual Property</p>
+      
+      <h2 class="text-2xl font-light mb-6">What We Own</h2>
+      
+      <div class="space-y-6 text-white/50 font-light text-sm leading-relaxed">
+        <p>
+          PropNT retains all rights to:
+        </p>
+        <ul class="space-y-2 ml-4">
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Platform architecture, interface design, and user experience flows</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Aggregated intent signals and matching algorithms</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Anonymized data patterns derived from system usage</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>The Silo Protocol and tiered access methodology</span>
+          </li>
+        </ul>
+        <p>
+          Users retain rights to their original content (property descriptions, requirements) 
+          but grant PropNT a perpetual license to use this content for platform operation, 
+          improvement, and anonymized aggregation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">07 — Liability & Risk</p>
+      
+      <h2 class="text-2xl font-light mb-6">What We Are Not</h2>
+      
+      <div class="space-y-6 text-white/50 font-light text-sm leading-relaxed">
+        <div class="bg-red-500/5 border border-red-500/20 p-6 mb-8">
+          <p class="text-white/70 font-medium mb-2">Critical Acknowledgment</p>
+          <p class="text-white/50">
+            PropNT is a discovery and mediation infrastructure, not a party to any transaction. 
+            We do not hold deposits, transfer funds, or guarantee property condition, legal title, 
+            or transaction completion.
+          </p>
+        </div>
+        
+        <p>
+          We are not liable for:
+        </p>
+        <ul class="space-y-2 ml-4">
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Accuracy of user-submitted information (subject to verification, not guarantee)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Conduct of users outside platform-mediated interactions</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Market conditions, property value changes, or transaction outcomes</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Force majeure events affecting system availability</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Indirect, consequential, or punitive damages</span>
+          </li>
+        </ul>
+        
+        <p>
+          Our maximum liability for any claim is limited to the amount paid to PropNT 
+          in the 12 months preceding the incident, or ₹10,000, whichever is less.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 8 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">08 — Termination</p>
+      
+      <h2 class="text-2xl font-light mb-6">Exit Protocol</h2>
+      
+      <div class="space-y-6 text-white/50 font-light text-sm leading-relaxed">
+        <p>
+          Either party may terminate this agreement:
+        </p>
+        <ul class="space-y-2 ml-4">
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>User: immediate, via account deletion request</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>PropNT: with 30 days notice, or immediately for protocol violations</span>
+          </li>
+        </ul>
+        <p>
+          Upon termination:
+        </p>
+        <ul class="space-y-2 ml-4">
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>All access credentials are revoked</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Active mediations are transferred or closed per stage</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Data retention follows Privacy Protocol schedules</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-white/20">→</span>
+            <span>Survival clauses (liability, confidentiality) remain in force</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 9 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">09 — Dispute Resolution</p>
+      
+      <h2 class="text-2xl font-light mb-6">Conflict Architecture</h2>
+      
+      <div class="space-y-6 text-white/50 font-light text-sm leading-relaxed">
+        <p>
+          Disputes between users and PropNT:
+        </p>
+        <ol class="space-y-2 ml-4 list-decimal list-inside">
+          <li>Informal resolution through designated support channel (14 days)</li>
+          <li>Mediation by independent third party (Bangalore, English language)</li>
+          <li>Binding arbitration under Indian Arbitration Act, 1996</li>
+        </ol>
+        <p>
+          Disputes between users (seeker vs. provider):
+        </p>
+        <p class="ml-4 border-l-2 border-white/20 pl-4">
+          PropNT is not a party. StayBroker mediation records may be provided to 
+          authorized dispute resolution bodies. Users agree to attempt good-faith 
+          resolution before formal proceedings.
+        </p>
+        <p>
+          Jurisdiction: Courts at Bangalore, India. Governing law: Republic of India.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 10 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">10 — Modifications</p>
+      
+      <h2 class="text-2xl font-light mb-6">Evolution</h2>
+      
+      <p class="text-white/50 font-light leading-relaxed">
+        We may modify these terms to reflect system evolution, regulatory requirements, 
+        or operational learning. Material changes are notified 30 days in advance via 
+        email and platform notice. Continued use constitutes acceptance. 
+        Archived versions available upon request.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="border-t border-white/5 pt-16 pb-32">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">11 — Contact</p>
+      
+      <h2 class="text-2xl font-light mb-6">Legal Office</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-sm text-white/80 font-medium mb-2">Terms Inquiries</p>
+          <p class="text-white/50 font-light text-sm mb-1">legal@propnt.network</p>
+          <p class="text-white/30 text-xs">Response within 72 hours</p>
+        </div>
+        <div>
+          <p class="text-sm text-white/80 font-medium mb-2">Physical Correspondence</p>
+          <p class="text-white/50 font-light text-sm">
+            PropNT Legal Office<br />
+            [Registered Address]<br />
+            Bangalore, India
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-white/5">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-xs tracking-[0.3em] uppercase opacity-40">PropNT</div>
+      <div class="flex gap-8 text-[10px] tracking-widest uppercase opacity-30">
+        <span>© 2025</span>
+        <span>Property Network</span>
+        <a href="privacy.html" class="hover:opacity-60 transition-opacity">Privacy</a>
+        <a href="#" class="hover:opacity-60 transition-opacity">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

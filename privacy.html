@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy — PropNT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+    
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .grain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    }
+    
+    .section-number {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0a0a] text-[#f5f5f5] antialiased selection:bg-white selection:text-black">
+
+  <div class="grain"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-40 px-6 py-6 flex justify-between items-center mix-blend-difference">
+    <a href="#" class="text-sm tracking-[0.3em] font-medium uppercase">PropNT</a>
+    <div class="hidden md:flex gap-8 text-xs tracking-widest uppercase opacity-60">
+      <a href="#" class="hover:opacity-100 transition-opacity">Approach</a>
+      <a href="#" class="hover:opacity-100 transition-opacity">Signal</a>
+      <a href="#" class="hover:opacity-100 transition-opacity">Access</a>
+    </div>
+    <button class="text-xs tracking-widest uppercase border border-white/20 px-4 py-2 hover:bg-white hover:text-black transition-all duration-300">
+      Enter
+    </button>
+  </nav>
+
+  <!-- Header -->
+  <header class="pt-32 pb-16 px-6 border-b border-white/5">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-4">Legal</p>
+      <h1 class="text-4xl md:text-5xl font-light mb-6">Privacy Protocol</h1>
+      <p class="text-white/50 font-light max-w-2xl leading-relaxed">
+        This document governs how PropNT handles information in a system designed for control, 
+        not exposure. We don't just protect data—we architect its absence.
+      </p>
+      
+      <div class="mt-8 flex gap-4 text-[10px] tracking-widest uppercase opacity-40">
+        <span>Effective: February 2025</span>
+        <span>•</span>
+        <span>Version 1.0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-4xl mx-auto px-6 py-16">
+
+    <!-- Introduction -->
+    <section class="mb-20">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">00 — Preamble</p>
+      <div class="prose prose-invert prose-lg max-w-none">
+        <p class="text-white/70 font-light leading-relaxed mb-6">
+          PropNT operates as a controlled access layer for residential property discovery. 
+          Our privacy architecture is not an afterthought—it is the foundation. We designed 
+          this system to minimize data exposure by default, not to collect and then protect.
+        </p>
+        <p class="text-white/70 font-light leading-relaxed">
+          By using PropNT, you enter a protocol where information is siloed, contact is 
+          mediated, and identity is verified before it is shared. This policy explains 
+          what we hold, why we hold it, and—critically—what we deliberately do not hold.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 1 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">01 — Information Architecture</p>
+      
+      <h2 class="text-2xl font-light mb-6">What We Collect</h2>
+      
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-sm tracking-widest uppercase opacity-60 mb-3">Intent Signals (Users)</h3>
+          <ul class="space-y-2 text-white/50 font-light text-sm">
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Conversational queries and search patterns (anonymized until qualification)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Qualification responses: timeline, budget range, purpose, flexibility</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Verification documents (government ID, income proof) — encrypted, siloed</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Contact information — released only post-qualification to verified mediators</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm tracking-widest uppercase opacity-60 mb-3">Supply Signals (Providers)</h3>
+          <ul class="space-y-2 text-white/50 font-light text-sm">
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Property characteristics: type, location zone, specifications, availability</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Ownership verification documents — encrypted, access-logged</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Exact addresses — geofenced, never displayed in discovery phase</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Direct contact details — held in escrow, released only through mediation</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm tracking-widest uppercase opacity-60 mb-3">System Telemetry</h3>
+          <ul class="space-y-2 text-white/50 font-light text-sm">
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Interaction metadata: session duration, qualification completion rates</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Matching patterns: what queries convert, where intent drops</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white/20 mt-1">→</span>
+              <span>Mediation outcomes: deal progression, closure signals</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">02 — Information We Deliberately Exclude</p>
+      
+      <h2 class="text-2xl font-light mb-6">The Negative Space</h2>
+      
+      <p class="text-white/50 font-light leading-relaxed mb-8">
+        Our privacy model is defined as much by what we refuse to collect as what we hold. 
+        The following data categories are systematically excluded from our architecture:
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="border border-white/10 p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <i data-lucide="x-circle" class="w-4 h-4 text-red-500/60"></i>
+            <span class="text-xs tracking-widest uppercase opacity-60">Excluded</span>
+          </div>
+          <p class="text-sm font-medium mb-1">Precise Geolocation (Users)</p>
+          <p class="text-xs text-white/40">We don't track real-time location. Discovery is zone-based, not coordinate-based.</p>
+        </div>
+
+        <div class="border border-white/10 p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <i data-lucide="x-circle" class="w-4 h-4 text-red-500/60"></i>
+            <span class="text-xs tracking-widest uppercase opacity-60">Excluded</span>
+          </div>
+          <p class="text-sm font-medium mb-1">Browsing History (External)</p>
+          <p class="text-xs text-white/40">No cookies for cross-site tracking. No pixels. No retargeting infrastructure.</p>
+        </div>
+
+        <div class="border border-white/10 p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <i data-lucide="x-circle" class="w-4 h-4 text-red-500/60"></i>
+            <span class="text-xs tracking-widest uppercase opacity-60">Excluded</span>
+          </div>
+          <p class="text-sm font-medium mb-1">Social Graph Data</p>
+          <p class="text-xs text-white/40">No integration with social platforms. No friend lists, no network analysis.</p>
+        </div>
+
+        <div class="border border-white/10 p-6">
+          <div class="flex items-center gap-3 mb-3">
+            <i data-lucide="x-circle" class="w-4 h-4 text-red-500/60"></i>
+            <span class="text-xs tracking-widest uppercase opacity-60">Excluded</span>
+          </div>
+          <p class="text-sm font-medium mb-1">Biometric Data</p>
+          <p class="text-xs text-white/40">No facial recognition, no voice prints, no behavioral biometrics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">03 — The Silo Protocol</p>
+      
+      <h2 class="text-2xl font-light mb-6">How Information Flows</h2>
+      
+      <p class="text-white/50 font-light leading-relaxed mb-8">
+        PropNT operates a tiered information architecture. Data is not freely accessible 
+        within our system—it is compartmentalized and released only through verified gates.
+      </p>
+
+      <div class="space-y-6">
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 border border-white/20 flex items-center justify-center flex-shrink-0">
+            <span class="text-xs font-medium">L1</span>
+          </div>
+          <div>
+            <h3 class="text-sm tracking-widest uppercase opacity-80 mb-2">Discovery Layer (Public)</h3>
+            <p class="text-white/50 font-light text-sm leading-relaxed">
+              Anonymous query processing. No user identification. No property identification. 
+              Only pattern matching against anonymized supply signals.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 border border-white/20 flex items-center justify-center flex-shrink-0">
+            <span class="text-xs font-medium">L2</span>
+          </div>
+          <div>
+            <h3 class="text-sm tracking-widest uppercase opacity-80 mb-2">Qualification Layer (Authenticated)</h3>
+            <p class="text-white/50 font-light text-sm leading-relaxed">
+              Identity verified. Intent documented. Access to restricted summaries granted. 
+              Contact information remains encrypted. Exact addresses remain hidden.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 border border-white/20 flex items-center justify-center flex-shrink-0">
+            <span class="text-xs font-medium">L3</span>
+          </div>
+          <div>
+            <h3 class="text-sm tracking-widest uppercase opacity-80 mb-2">Mediation Layer (Controlled)</h3>
+            <p class="text-white/50 font-light text-sm leading-relaxed">
+              StayBroker mediators access verified identities and escrowed contact details 
+              only when facilitating structured introductions. All access is logged, 
+              time-bound, and purpose-limited.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 border border-white/20 flex items-center justify-center flex-shrink-0">
+            <span class="text-xs font-medium">L4</span>
+          </div>
+          <div>
+            <h3 class="text-sm tracking-widest uppercase opacity-80 mb-2">Transaction Layer (Released)</h3>
+            <p class="text-white/50 font-light text-sm leading-relaxed">
+              Direct contact authorized only after mediation checkpoint. Both parties 
+              notified of information release. Post-transaction data retention minimized.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">04 — Data Custody</p>
+      
+      <h2 class="text-2xl font-light mb-6">Storage & Security</h2>
+      
+      <div class="space-y-6 text-white/50 font-light text-sm leading-relaxed">
+        <p>
+          All data is stored in encrypted form at rest (AES-256) and in transit (TLS 1.3). 
+          Verification documents are held in isolated storage with access logging. 
+          We maintain no permanent backups of conversational content—only structured intent 
+          signals and metadata are retained for system improvement.
+        </p>
+        <p>
+          Our infrastructure is region-locked. Data does not cross jurisdictional boundaries 
+          without explicit processing authorization. We conduct no automated profiling 
+          that produces legal or similarly significant effects.
+        </p>
+        <p>
+          In the event of a security breach, our protocol prioritizes containment over 
+          continuity. Systems may be taken offline to prevent data exposure. Users 
+          will be notified within 72 hours of confirmed unauthorized access.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">05 — Your Rights</p>
+      
+      <h2 class="text-2xl font-light mb-6">Control & Erasure</h2>
+      
+      <p class="text-white/50 font-light leading-relaxed mb-6">
+        Because we minimize collection, your privacy rights are structurally easier to exercise. 
+        You may:
+      </p>
+
+      <ul class="space-y-3 text-white/50 font-light text-sm mb-8">
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-4 h-4 mt-0.5 text-green-500/60"></i>
+          <span>Request complete deletion of your account and associated data (30-day processing)</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-4 h-4 mt-0.5 text-green-500/60"></i>
+          <span>Withdraw qualification data before mediation initiation</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-4 h-4 mt-0.5 text-green-500/60"></i>
+          <span>Access logs of who has viewed your verification documents</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-4 h-4 mt-0.5 text-green-500/60"></i>
+          <span>Request export of your intent history in machine-readable format</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <i data-lucide="check" class="w-4 h-4 mt-0.5 text-green-500/60"></i>
+          <span>Object to any processing beyond core service provision</span>
+        </li>
+      </ul>
+
+      <p class="text-white/50 font-light text-sm">
+        To exercise these rights, contact: <span class="text-white/80 font-mono text-xs">privacy@propnt.network</span>
+      </p>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">06 — Retention & Decay</p>
+      
+      <h2 class="text-2xl font-light mb-6">Data Lifespan</h2>
+      
+      <div class="overflow-hidden border border-white/10">
+        <table class="w-full text-sm">
+          <thead class="border-b border-white/10 bg-white/5">
+            <tr>
+              <th class="text-left p-4 text-xs tracking-widest uppercase opacity-60 font-medium">Data Category</th>
+              <th class="text-left p-4 text-xs tracking-widest uppercase opacity-60 font-medium">Retention Period</th>
+              <th class="text-left p-4 text-xs tracking-widest uppercase opacity-60 font-medium">Disposition</th>
+            </tr>
+          </thead>
+          <tbody class="text-white/50 font-light">
+            <tr class="border-b border-white/5">
+              <td class="p-4">Conversational queries (raw)</td>
+              <td class="p-4">7 days</td>
+              <td class="p-4">Cryptographic purge</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-4">Intent signals (structured)</td>
+              <td class="p-4">24 months</td>
+              <td class="p-4">Anonymization, aggregation</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-4">Verification documents</td>
+              <td class="p-4">Active + 90 days</td>
+              <td class="p-4">Secure deletion, certificate</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-4">Contact details (escrowed)</td>
+              <td class="p-4">Transaction + 180 days</td>
+              <td class="p-4">Archive or delete per user choice</td>
+            </tr>
+            <tr>
+              <td class="p-4">Mediation logs</td>
+              <td class="p-4">36 months</td>
+              <td class="p-4">Pseudonymization, compliance hold</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">07 — Third Parties</p>
+      
+      <h2 class="text-2xl font-light mb-6">Information Sharing</h2>
+      
+      <p class="text-white/50 font-light leading-relaxed mb-6">
+        PropNT does not sell data. We do not engage in programmatic advertising. 
+        Limited sharing occurs only with:
+      </p>
+
+      <div class="space-y-4">
+        <div class="border-l-2 border-white/20 pl-6 py-2">
+          <p class="text-sm font-medium text-white/80 mb-1">Verified StayBroker Mediators</p>
+          <p class="text-xs text-white/40">Access limited to matched parties, time-bound, logged</p>
+        </div>
+        <div class="border-l-2 border-white/20 pl-6 py-2">
+          <p class="text-sm font-medium text-white/80 mb-1">Infrastructure Providers (AWS, encryption services)</p>
+          <p class="text-xs text-white/40">Contractual data processing agreements, no independent access</p>
+        </div>
+        <div class="border-l-2 border-white/20 pl-6 py-2">
+          <p class="text-sm font-medium text-white/80 mb-1">Legal Authorities (compelled disclosure only)</p>
+          <p class="text-xs text-white/40">Valid legal process required, user notification where permitted</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8 -->
+    <section class="mb-20 border-t border-white/5 pt-16">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">08 — Changes</p>
+      
+      <h2 class="text-2xl font-light mb-6">Policy Evolution</h2>
+      
+      <p class="text-white/50 font-light leading-relaxed">
+        This protocol may be updated to reflect system evolution or regulatory requirements. 
+        Material changes will be notified 30 days in advance via email and platform notice. 
+        Continued use constitutes acceptance. Archived versions available upon request.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="border-t border-white/5 pt-16 pb-32">
+      <p class="text-xs tracking-[0.3em] uppercase opacity-40 mb-6 section-number">09 — Contact</p>
+      
+      <h2 class="text-2xl font-light mb-6">Privacy Office</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-sm text-white/80 font-medium mb-2">Data Protection Officer</p>
+          <p class="text-white/50 font-light text-sm mb-1">privacy@propnt.network</p>
+          <p class="text-white/30 text-xs">Response within 48 hours</p>
+        </div>
+        <div>
+          <p class="text-sm text-white/80 font-medium mb-2">Physical Correspondence</p>
+          <p class="text-white/50 font-light text-sm">
+            PropNT Privacy Office<br />
+            [Registered Address]<br />
+            Bangalore, India
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-white/5">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-xs tracking-[0.3em] uppercase opacity-40">PropNT</div>
+      <div class="flex gap-8 text-[10px] tracking-widest uppercase opacity-30">
+        <span>© 2025</span>
+        <span>Property Network</span>
+        <a href="#" class="hover:opacity-60 transition-opacity">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
