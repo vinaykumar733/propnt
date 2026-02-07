@@ -82,7 +82,11 @@
       <a href="#signal" class="hover:opacity-100 transition-opacity">Signal</a>
       <a href="#access" class="hover:opacity-100 transition-opacity">Access</a>
     </div>
-    <a href="mailto:PropNT.help@gmail.com?subject=Request%20Access%20to%20PropNT&body=Name:%0ARole:%0ACity:%0AUse%20case:" class="text-xs tracking-widest uppercase border border-white/20 px-4 py-2 hover:bg-white hover:text-black transition-all duration-300">
+    <a
+  href="mailto:PropNT.help@gmail.com?subject=Request%20Access%20to%20PropNT&body=Name:%0ARole:%0ACity:%0AUse%20case:"
+  onclick="showAccessPopup()"
+  class="text-xs tracking-widest uppercase border border-white/20 px-4 py-2 hover:bg-white hover:text-black transition-all duration-300"
+>
   Enter
 </a>
 
@@ -435,5 +439,15 @@
   <script>
     lucide.createIcons();
   </script>
+  <script>
+  function showAccessPopup() {
+    setTimeout(() => {
+      alert(
+        "Request Access\n\nYour email app will open.\nPlease send the request so we can review your access."
+      );
+    }, 100);
+  }
+</script>
+
 </body>
 </html>
